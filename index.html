@@ -21,19 +21,46 @@
         font-size: 1.4rem;
       }
     }
-    /* 🎥 Hero Aside Responsive */
+    /* 📱 Responsive Fix for Aside/Gallery */
     .hero-aside {
       display: flex;
-      flex-direction: column;
       gap: 1rem;
     }
-
-    .hero-aside .card img {
+    
+    /* side images beside teaser on desktop */
+    .hero-aside .side-images {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      flex: 1;
+    }
+    
+    /* teaser takes half on desktop */
+    .hero-aside .showcase {
+      flex: 1;
+    }
+    
+    /* images always scale */
+    .hero-aside img {
       width: 100%;
       height: auto;
-      display: block;
       object-fit: cover;
-      border-radius: var(--radius);
+      display: block;
+      border-radius: 10px;
+    }
+    
+    /* 📱 Mobile: stack everything vertically */
+    @media (max-width: 768px) {
+      .hero-aside {
+        flex-direction: column;
+      }
+      .hero-aside .side-images {
+        flex-direction: row; /* optional: side by side small previews */
+      }
+      .hero-aside .showcase,
+      .hero-aside .side-images {
+        width: 100%;
+      }
     }
 
     /* two small cards row on desktop */
@@ -610,3 +637,4 @@
   </script>
 </body>
 </html>
+
