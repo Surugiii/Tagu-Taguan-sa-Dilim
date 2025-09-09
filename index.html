@@ -24,19 +24,32 @@
       }
     }
 
-    /* 🎥 Hero Aside Responsive */
+    /* 🎥 Hero Aside Fix */
     .hero-aside {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-
-    .hero-aside .card img {
+    
+    .hero-aside img {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
       border-radius: var(--radius);
+    }
+    
+    /* side-images row on desktop */
+    .side-images {
+      display: flex;
+      gap: 0.8rem;
+    }
+    
+    /* stack vertically on mobile */
+    @media (max-width: 768px) {
+      .side-images {
+        flex-direction: column;
+      }
     }
 
     /* two small cards row on desktop */
@@ -463,22 +476,22 @@
         </div>
 
         <aside class="hero-aside">
-          <div class="card showcase" style="padding:0; overflow:hidden;">
+          <div class="card showcase">
             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk2amY1NzhuaHc3dW4yOWxybzBrZnNxb2pzcmZoazY2dGVmYTUxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HWjhWgxeDqkYM3sPGc/giphy.webp" 
-              alt="Horror teaser" 
-              style="width:100%;height:auto;display:block;object-fit:cover;">
+              alt="Horror teaser">
             <div class="vignette"></div>
           </div>
-
-          <div style="margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap;">
-            <div class="card" style="flex:1;overflow:hidden;padding:0;">
-              <img src="image/gamep1.jpg" alt="Gameplay 1" style="width:100%;height:auto;display:block;object-fit:cover;">
+        
+          <div class="side-images">
+            <div class="card">
+              <img src="image/gamep1.jpg" alt="Gameplay 1">
             </div>
-            <div class="card" style="flex:1;overflow:hidden;padding:0;">
-              <img src="image/gamep2.jpg" alt="Gameplay 2" style="width:100%;height:auto;display:block;object-fit:cover;">
+            <div class="card">
+              <img src="image/gamep2.jpg" alt="Gameplay 2">
             </div>
           </div>
         </aside>
+
       </div>
     </section>
 
@@ -613,3 +626,4 @@
   </script>
 </body>
 </html>
+
