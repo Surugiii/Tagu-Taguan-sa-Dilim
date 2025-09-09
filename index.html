@@ -17,66 +17,92 @@
       .hero-grid aside {
         margin-top: 1.5rem;
       }
-
+    
       nav ul {
         flex-wrap: wrap;
         justify-content: center;
       }
     }
-
+    
     @media (max-width: 768px) {
       .container {
         padding: 1rem; /* reduce padding */
       }
-
+    
       .hero h1 {
         font-size: 1.8rem;
       }
       .lead {
         font-size: .95rem;
       }
-
+    
       .gallery {
         grid-template-columns: repeat(2, 1fr); /* 2 per row */
       }
-
+    
       .features {
         display: flex;
         flex-direction: column;
         gap: 1rem;
       }
-
+    
       .card {
         flex: 1 1 100%;
       }
+    
+      /* ✅ Navbar adjustments */
+      .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    
+      nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 0.8rem;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+      }
     }
-
+    
     @media (max-width: 480px) {
       .hero {
         min-height: 65vh;
         padding: 2rem 1rem;
+        text-align: center;
       }
-
+    
       .gallery {
         grid-template-columns: 1fr; /* 1 per row */
       }
-
+    
       .hero-grid {
         gap: 1rem;
       }
-
+    
       .hero h1 {
         font-size: 1.4rem;
       }
-
+    
       nav ul {
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
       }
-
+    
+      nav ul li {
+        text-align: center;
+        width: 100%;
+      }
+    
       .btn {
         padding: 0.4rem 0.7rem;
         font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
       }
     }
 
@@ -474,4 +500,5 @@
     })();
   </script>
 </body>
+
 </html>
