@@ -361,8 +361,14 @@
 
     /* Gallery */
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem;margin-top:1.2rem}
-    .shot{height:140px;border-radius:8px;background:#111;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.03);overflow:hidden;transition:transform .3s ease}
-
+    .shot {
+      width: 250px;   /* adjust as needed */
+      height: 250px;  /* adjust as needed */
+      background-size: cover;   /* makes image cover the div */
+      background-position: center; /* keeps it centered */
+      border-radius: 8px; /* keep rounded corners if you like */
+      margin: 5px;  /* spacing between them */
+    }
     /* Sections */
     section{padding:3rem 0}
     h2{font-family:var(--display);font-size:1.6rem;margin:0 0 1rem}
@@ -481,27 +487,41 @@
 
     <section id="features" class="container">
       <h2>Key Features</h2>
-      <p class="lead-muted">PLACEHOLDER</p>
+      <p class="lead-muted">Tagu-Taguan sa Dilim</p>
 
       <div class="features">
         <div class="feature">
-          <h3>PLACEHOLDER</h3>
-          <p class="muted">PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER</p>
+          <h3>Dark Environment</h3>
+          <p class="muted">Limited visibility kaya mahirap maghanap at magtago.</p>
         </div>
         <div class="feature">
-          <h3>PLACEHOLDER</h3>
-          <p class="muted">PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER</p>
+          <h3>Creepy Sound Effects</h3>
+          <p class="muted">tunog ng yabag, bulong, or biglang jumpscare.</p>
         </div>
         <div class="feature">
-          <h3>PLACEHOLDER</h3>
-          <p class="muted">PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER</p>
+          <h3>Dynamic Hiding Spots</h3>
+          <p class="muted">maraming lugar para magtago (cabinets, tables, behind doors, etc.).</p>
+        </div>
+        <div class="feature">
+          <h3> Survivor Objectives</h3>
+          <p class="muted">Kailangan makahanap ng susi, makabukas ng pinto, o makatakas bago maabutan.</p>
+        </div>
+        <div class="feature">
+          <h3>Realistic Horror Atmosphere</h3>
+          <p class="muted">Madilim na mapa, nakakatakot na sound effects, at biglaang jumpscares.</p>
+        </div>
+        <div class="feature">
+          <h3>Flashlight Survival</h3>
+          <p class="muted">Gumamit ng flashlight na may limited battery para makahanap ng daan.</p>
         </div>
       </div>
-
-      <div style="margin-top:1.2rem" class="gallery" id="gallery">
-        <div class="shot" style="background-image:url('#')"></div>
-        <div class="shot" style="background-image:url('#')"></div>
-        <div class="shot" style="background-image:url('#')"></div>
+      
+      <h2 style="margin-top:2.5rem;" id="gallery">Game Gallery</h2>
+      <p class="lead-muted">Collections</p>
+      <div style="margin-top:1.2rem" class="gallery">
+        <div class="shot" style="background-image:url('image/gamePic2.png')"></div>
+        <div class="shot" style="background-image:url('image/gamePic3.png')"></div>
+        <div class="shot" style="background-image:url('image/gamePic4.png')"></div>
         <div class="shot" style="background-image:url('#')"></div>
       </div>
     </section>
